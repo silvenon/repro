@@ -7,7 +7,7 @@ yarn install
 # run ESLint via CLI to prove that it works
 yarn lint
 # run ESLint via Node.js API to prove that it works
-yarn run
+yarn script
 # run test which runs ESLint via Node.js API, this fails
 yarn test
 ```
