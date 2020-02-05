@@ -1,0 +1,3 @@
+.form {
+  composes: noMargin from '../styles/utils.module.css';
+}
