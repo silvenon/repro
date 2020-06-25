@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-posthtml": "^3.0.4",
+    "posthtml-expressions": "^1.4.3"
+  }
+}
