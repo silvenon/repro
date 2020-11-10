@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.2.0",
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "postcss": "^8.1.6",
+    "tailwindcss": "^1.9.6"
+  }
+}
