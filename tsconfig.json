@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "lib": ["ESNext", "DOM"],
+    "esModuleInterop": true,
+    "jsx": "react",
+    "strict": true,
+  },
+}

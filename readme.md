@@ -1,3 +1,1 @@
-# Repro
-
-This is a collection of demos reproducing various bugs, separated into branches.
+# Repro of TypeScript error when trying to enable styled-component's `css` prop in combination with Storybook
