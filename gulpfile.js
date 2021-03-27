@@ -1,7 +1,12 @@
 const gulp = require('gulp')
+const del = require('del')
 const postcss = require('gulp-postcss')
 const browserSync = require('browser-sync').create()
 const postcssConfig = require('./postcss.config')
+
+async function clean() {
+  await del('dist')
+}
 
 function serve() {
   browserSync.init({
@@ -30,6 +35,6 @@ function watch() {
 }
 
 module.exports = {
-  dev: gulp.parallel(views, styles, watch, serve),
-  build: gulp.parallel(views, styles),
+  dev: gulp.series(clean, gulp.parallel(views, styles, watch, serve)),
+  build: gulp.series(clean, gulp.parallel(views, styles)),
 }
