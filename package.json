@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development gulp dev",
+    "build": "gulp build"
+  },
+  "dependencies": {
+    "@tailwindcss/jit": "^0.1.12",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "tailwindcss": "^2.0.4"
+  }
+}
