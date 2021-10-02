@@ -1,3 +1,7 @@
-# Repro
+# Repro for @tailwindcss/typography v0.5 alpha
 
-This is a collection of demos reproducing various bugs, separated into branches.
+```sh
+npm run dev
+```
+
+Notice that first and last child inside `.prose` have top and bottom margins respectively.
