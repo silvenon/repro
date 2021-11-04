@@ -1,3 +1,3 @@
-# Repro
+# `@parcel/resolver-glob` cache invalidation
 
-This is a collection of demos reproducing various bugs, separated into branches.
+Reproduces some of cache issues related to `@parcel/resolver-glob`.

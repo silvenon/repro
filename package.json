@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "dependencies": {
+    "parcel": "^2.0.0"
+  },
+  "devDependencies": {
+    "@parcel/resolver-glob": "^2.0.0",
+    "@parcel/transformer-mdx": "^2.0.0"
+  }
+}
