@@ -1,3 +1,5 @@
-# Repro
+# Tailwind repro with creating variants with commas
 
-This is a collection of demos reproducing various bugs, separated into branches.
+```
+npm run dev
+```

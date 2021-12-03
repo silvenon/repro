@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "tailwindcss --input input.css --output output.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.0.0-alpha.2"
+  }
+}

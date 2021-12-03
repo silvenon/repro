@@ -1,0 +1,8 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .test {
+    @apply my-variant:text-red-500;
+  }
+}
