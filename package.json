@@ -1,9 +1,30 @@
 {
   "private": true,
+  "name": "remix-app-template",
+  "description": "",
+  "license": "",
   "scripts": {
-    "build": "esbuild ./input.js --bundle --outfile=./app/bundle.js"
+    "build": "remix build",
+    "dev": "remix dev",
+    "postinstall": "remix setup node"
   },
   "dependencies": {
-    "esbuild": "^0.13.14"
-  }
+    "@remix-run/react": "^1.1.1",
+    "@remix-run/serve": "^1.1.1",
+    "@remix-run/vercel": "^1.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.1.1",
+    "xdm": "^3.3.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.1.1",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false
 }

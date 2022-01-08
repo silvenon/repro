@@ -1,1 +1,0 @@
-document.querySelector('.loading').textContent = 'Script loaded!'
