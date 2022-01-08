@@ -1,29 +1,29 @@
-import { useLoaderData } from 'remix'
+import { useLoaderData, json, useCatch } from 'remix'
 import type { LoaderFunction } from 'remix'
-import { bundleMDX } from '../mdx-bundler.server'
+import esbuild from '../esbuild.server'
 
 interface LoaderData {
-  title: string
+  code: string
 }
 
 export const loader: LoaderFunction = async () => {
-  const result = await bundleMDX({
-    source: `
----
-title: Hello world!
----
-# Hello world!
-    `.trim()
-  })
-  return result.frontmatter
+  try {
+    const result = await esbuild.transform(`{ "title": "Hello world!" }`, { loader: 'json' })
+    return json(result, 200)
+  } catch (err) {
+    return new Response(err instanceof Error ? err.message : 'Error while compiling with esbuild', { status: 500 })
+  }
 }
 
 export default function Index() {
-  const meta = useLoaderData<LoaderData>()
+  const result = useLoaderData<LoaderData>()
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Welcome to Remix</h1>
-      <h2>Frontmatter title: {meta?.title ?? '...'}</h2>
+      <p>Code compiled by esbuild:</p>
+      <pre>
+        {result?.code ?? '...'}
+      </pre>
       <ul>
         <li>
           <a
@@ -49,6 +49,29 @@ export default function Index() {
           </a>
         </li>
       </ul>
+    </div>
+  );
+}
+
+export function CatchBoundary() {
+  const response = useCatch()
+  return (
+    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+      <h1>Error</h1>
+      <pre>
+        {response?.statusText ?? '...'}
+      </pre>
+    </div>
+  )
+}
+
+export function ErrorBoundary({error}: {error: Error}) {
+  return (
+    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+      <h1>Error</h1>
+      <pre>
+        {error.message}
+      </pre>
     </div>
   );
 }
