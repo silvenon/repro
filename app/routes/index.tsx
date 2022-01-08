@@ -9,9 +9,9 @@ interface LoaderData {
 export const loader: LoaderFunction = async () => {
   try {
     const result = await esbuild.transform(`{ "title": "Hello world!" }`, { loader: 'json' })
-    return json(result, 200)
+    return result
   } catch (err) {
-    return new Response(err instanceof Error ? err.message : 'Error while compiling with esbuild', { status: 500 })
+    throw new Response(err instanceof Error ? err.message : 'Error while compiling with esbuild', { status: 500 })
   }
 }
 
@@ -58,8 +58,9 @@ export function CatchBoundary() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Error</h1>
+      <p>{response.statusText}</p>
       <pre>
-        {response?.statusText ?? '...'}
+        {response?.data ?? '...'}
       </pre>
     </div>
   )
