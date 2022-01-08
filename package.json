@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "esbuild ./input.js --bundle --outfile=./app/bundle.js"
+  },
+  "dependencies": {
+    "esbuild": "^0.14.10"
+  }
+}
