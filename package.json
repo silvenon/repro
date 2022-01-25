@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "css": "tailwindcss --output style.css",
+    "dev": "npm-run-all css --parallel dev:*",
+    "dev:parcel": "parcel index.html",
+    "dev:css": "npm run css -- --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@floating-ui/react-dom": "^0.4.3",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/react-dom": "^17.0.11",
+    "jest": "^27.4.7",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tailwindcss": "^3.0.16",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
+  }
+}
