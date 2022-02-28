@@ -1,0 +1,4 @@
+node_modules
+tailwind.css
+.parcel-cache
+dist
