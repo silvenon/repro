@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply grid h-screen place-content-center
+  }
+
+  [data-theme] {
+    @apply block p-4 rounded;
+  }
+  [data-theme='dark'] {
+    @apply bg-gray-800;
+  }
+
+  [data-rehype-pretty-code-fragment] {
+    @apply flex gap-4;
+  }
+}
