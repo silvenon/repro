@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.22.2",
+    "typescript": "^4.7.3"
+  },
+  "scripts": {
+    "test": "playwright test"
+  }
+}
