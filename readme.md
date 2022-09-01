@@ -1,3 +1,7 @@
-# Repro
+# Repro bunchee + react-jsx
 
-This is a collection of demos reproducing various bugs, separated into branches.
+Run the foollowing to reproduce the error:
+
+```
+npm run build
+```
