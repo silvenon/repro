@@ -1,3 +1,7 @@
-# Repro
+# Playwright UI + `test.fail()`
 
-This is a collection of demos reproducing various bugs, separated into branches.
+```sh
+npm install
+npx playwright test # works
+npx playwright test --ui # running the test fails
+```
