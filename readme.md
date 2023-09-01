@@ -1,3 +1,8 @@
-# Repro
+# Repro: resolving `url()` with esbuild-sass-plugin
 
-This is a collection of demos reproducing various bugs, separated into branches.
+To reproduce the issue, run:
+
+```
+npm install
+npm run build
+```
