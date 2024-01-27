@@ -1,3 +1,3 @@
-# Repro
+# Signed commits with different author
 
-This is a collection of demos reproducing various bugs, separated into branches.
+I changed this file using a signed commit, but I set someone else as the author of the commit.
