@@ -1,3 +1,3 @@
-# Unsigned commits with different author
+# Signed commits with different committer
 
-I changed this file using an unsigned commit, but I set someone else as the author of the commit.
+I changed this file using a signed commit, but a different comitter.
