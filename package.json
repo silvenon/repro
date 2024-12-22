@@ -4,7 +4,7 @@
   "scripts": {
     "setup": "npm install && prisma generate && prisma migrate deploy",
     "build": "vite build",
-    "start": "dist/repro.js"
+    "start": "node dist/repro.js"
   },
   "dependencies": {
     "@prisma/client": "^6.1.0"
