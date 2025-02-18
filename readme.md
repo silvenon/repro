@@ -1,3 +1,5 @@
-# Repro
+# `vitest --browser.headless=false` doesn't load the UI when using workspaces
 
-This is a collection of demos reproducing various bugs, separated into branches.
+```
+npm test
+```
