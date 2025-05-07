@@ -1,3 +1,6 @@
-# Repro
+# `eslint-config-prettier` CLI utility with ESLint flat config
 
-This is a collection of demos reproducing various bugs, separated into branches.
+```
+npm install
+npm run lint
+```
