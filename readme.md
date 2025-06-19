@@ -1,3 +1,7 @@
-# Repro
+# Unit testing React Router v7 error boundaries with MSW
 
-This is a collection of demos reproducing various bugs, separated into branches.
+```sh
+npm install
+npm run dev
+npm test
+```
