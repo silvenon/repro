@@ -1,12 +1,16 @@
-import { Suspense } from "react";
 import { type RouteObject, Await, useLoaderData } from "react-router";
 
-function loader() {
+async function loader() {
   return {
-    data: fetch("https://jsonplaceholder.typicode.com/posts/1").then(
+    data: await fetch("https://jsonplaceholder.typicode.com/posts/1").then(
       (response) => response.json(),
     ),
   };
+}
+
+function Home() {
+  useLoaderData<typeof loader>();
+  return <div>Hello world!</div>;
 }
 
 export const routes = [
@@ -15,18 +19,7 @@ export const routes = [
     // get rid of warning during testing
     HydrateFallback: import.meta.env.MODE === "test" ? () => null : undefined,
     loader,
-    Component: () => {
-      const { data } = useLoaderData<typeof loader>();
-      return (
-        <Suspense>
-          <Await resolve={data}>
-            <div>Hello world!</div>
-          </Await>
-        </Suspense>
-      );
-    },
-    ErrorBoundary: () => {
-      return <div>Error occurred!</div>;
-    },
+    Component: () => <Home />,
+    ErrorBoundary: () => <div>Error occurred!</div>,
   },
 ] satisfies RouteObject[];
