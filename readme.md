@@ -1,3 +1,10 @@
-# Repro
+# Warning when using Vitest with `rolldown-vite` and `@vitejs/plugin-react-oxc`
 
-This is a collection of demos reproducing various bugs, separated into branches.
+```
+npm install
+npm test
+```
+
+Notice the warning:
+
+> Both esbuild and oxc options were set. oxc options will be used and esbuild options will be ignored.
