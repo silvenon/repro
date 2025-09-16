@@ -1,3 +1,8 @@
-# Repro
+# React Router Middleware and `createRoutesStub`
 
-This is a collection of demos reproducing various bugs, separated into branches.
+Middleware is not working with React Router's `createRoutesStub`, maybe it simply doesn't work with memory router.
+
+```
+npm install
+npm test
+```
