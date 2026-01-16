@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "html-react-parser": "^5.2.7",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "rsc-html-stream": "^0.0.7",
+    "srvx": "^0.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "@vitejs/plugin-rsc": "^0.5.14",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "^8.0.0-beta.8"
+    },
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "packageManager": "pnpm@10.28.0+sha512.05df71d1421f21399e053fde567cea34d446fa02c76571441bfc1c7956e98e363088982d940465fd34480d4d90a0668bc12362f8aa88000a64e83d0b0e47be48"
+}
