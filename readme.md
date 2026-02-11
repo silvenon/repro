@@ -1,3 +1,9 @@
-# Repro
+# Vite CSS `url()` + plugin `resolveId()` hook
 
-This is a collection of demos reproducing various bugs, separated into branches.
+In Vite assets that loaded via `url()` doesn't appear to go through plugin `resolveId` hook. This is a problem for vitejs/vite#21476.
+
+```sh
+corepack install
+pnpm install
+pnpm build
+```
