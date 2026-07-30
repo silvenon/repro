@@ -1,0 +1,7 @@
+allowBuilds:
+  msw: true
+
+peerDependencyRules:
+  allowedVersions:
+    # Vitest v5 is currently in beta
+    "vitest-browser-react>vitest": "^5.0.0-0"
