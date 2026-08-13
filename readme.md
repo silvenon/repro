@@ -1,4 +1,4 @@
-# Repro: Vitest v5.0.0-beta.7, projects and setup
+# Repro: Vitest v5.0.0-rc.1, projects and setup
 
 I had been using Node v24 for this. What I've found out:
 
