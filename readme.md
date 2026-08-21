@@ -1,12 +1,7 @@
-# Repro: Vitest v5.0.0-rc.1, projects and setup
-
-I had been using Node v24 for this. What I've found out:
-
-- it only happens with `projects`, not if I collapse everything into top-level `test`
-- it only happens if `setup.ts` contains content, seemingly if it contains an import that augments vitest
+# Repro: Vitest v5.0.0-rc.2 doesn't work with `--browser.headless=false`
 
 ```sh
 pnpm install # install deps
 pnpm test:setup # install browsers
-pnpm test # run tests
+pnpm test # run tests with --browser.headless=false
 ```
