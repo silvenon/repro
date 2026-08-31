@@ -1,16 +1,21 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "test:setup": "playwright install --with-deps chromium",
-    "test": "vitest run --browser.headless=false"
+    "test": "vitest run --browser.trace=on"
   },
   "devDependencies": {
-    "@types/node": "^26.1.2",
-    "@vitest/browser-playwright": "5.0.0-rc.2",
-    "playwright": "^1.62.0",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@vitest/browser-playwright": "5.0.0-rc.4",
+    "playwright": "^1.62.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "typescript": "^7.0.2",
-    "vite": "^8.1.5",
-    "vitest": "5.0.0-rc.2",
+    "vite": "^8.2.2",
+    "vitest": "5.0.0-rc.4",
     "vitest-browser-react": "^2.2.0"
   },
   "devEngines": {
