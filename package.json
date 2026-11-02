@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "repro": "tsdown entry.mjs && node dist/entry.mjs"
+  },
+  "devDependencies": {
+    "@tsdown/css": "^0.23.4",
+    "tsdown": "^0.23.4"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^12",
+      "onFail": "error"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "^24",
+      "onFail": "error"
+    }
+  }
+}
